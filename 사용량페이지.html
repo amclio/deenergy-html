@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+
+       <meta charset="utf-8">
+
+       <title>home</title>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+       <style>
+ 
+
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+        .Login_pos {
+            text-align: left;
+            margin-left: 300px;
+        }
+
+           .select1 {border-bottom: 5px solid wheat ;border-top: 5px solid wheat; color: wheat;}
+
+           .select2 {border-bottom: 5px solid wheat; color: wheat;}
+
+           .title1 {border-width: 3px;border-color: whitesmoke;margin-top: 30px;margin-bottom: 30px;}
+
+           body {background-image: url(wallpaperbetter.jpg); background-size: cover; backdrop-filter: blur(5px);}
+
+           ul {text-align: center;border-width: 30px;}
+
+           li {margin-left: 30px;    font-family: 'Happiness-Sans-Title';}
+
+           a{color: wheat;text-decoration: 3px solid wheat;}
+
+           ul li {list-style-type: none;display: inline;outline: 1px;}
+
+           h1{ margin: 50px;  font-family: 'Happiness-Sans-Title';}
+           
+           p{color: wheat;  font-family: 'Happiness-Sans-Title'; }
+       </style>
+
+   </head>
+   <body>
+
+       <div class="title1">
+
+       <h1 style="display:inline;"><a href="Main_Page.html">에너지 절약 프로젝트</a></h1>
+
+       </div>
+
+       <div class="select1">
+
+       <ul id="Font-face">
+
+           <li class="Login_pos"><a href="사용량페이지.html">총 사용량 확인하기</a></li>
+
+           <li><a href="전력측정시작하기.html">전력 사용량 측정 시작</a></li>
+
+           <li><a href="홍보페이지/index1Explain.html">사용 방법 확인하기</a></li>
+
+           <li><a href="홍보페이지/index2AD.html">홍보 페이지 바로가기</a></li>
+           
+           <li class="Login_pos"><a href="login.php"><strong>Login</strong></a></li>
+
+       </ul>
+
+       </div>
+
+       <div class="select2">
+
+         <ul>
+
+           <li>4페이지로 이동하기</li>
+
+           <li>5페이지로 이동하기</li>
+
+         </ul>
+         <canvas id="LineG" style="width: 1600px; height: 900px;"></canvas>
+
+         <script>
+             //그래프 값(예시)
+             var L1x = [1,2,3,4,5,6,7,8,9,10,11,12];
+             var L1y = [100,120,130,120,110,200,250,280,200,180,150,300];
+             var L2y = [123,234,345,456,567,678,789,987,876,765,654,543];
+             var L3y = [234,123,345,567,435,768,345,456,678,432,354,546];
+ 
+             //꺽은선 그래프
+             var LineChart = new Chart("LineG", {
+                 type: "line",
+                 data: {
+                     labels: L1x,                                //x축
+                     datasets: [{
+                         label: '2020년',                        //그래프 이름
+                         backgroundColor: "rgba(0,0,0,0)",       //그래프 배경색
+                         borderColor: "red",                     //그래프 색
+                         data: L1y,                              //y축
+                         },{
+                         label: '2021년',
+                         data: L2y,
+                         borderColor: "yellow",
+                         backgroundColor: "rgba(0,0,0,0)",
+                         },{
+                         label: '2022년',
+                         data: L3y,
+                         borderColor: "blue",
+                         backgroundColor: "rgba(0,0,0,0)",
+                     }]
+                 },
+                 options:{
+                     scales: {
+                         yAxes: [{ticks: {min: 0, max: 1000}}],  //y축 최소, 최대
+                     }
+                 }
+             });
+ 
+ 
+         </script>
+   </body>
+</html>
