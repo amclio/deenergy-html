@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>home</title>
+
+    <style>
+      @font-face {
+        font-family: 'Happiness-Sans-Title';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2')
+          format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .Login_pos {
+        text-align: left;
+        margin-left: 300px;
+      }
+
+      .select1 {
+        border-bottom: 5px solid wheat;
+        border-top: 5px solid wheat;
+        color: wheat;
+      }
+
+      .select2 {
+        border-bottom: 5px solid wheat;
+        color: wheat;
+      }
+
+      .title1 {
+        border-width: 3px;
+        border-color: whitesmoke;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      body {
+        background-image: url(wallpaperbetter.jpg);
+        background-size: cover;
+        backdrop-filter: blur(5px);
+      }
+
+      ul {
+        text-align: center;
+        border-width: 30px;
+      }
+
+      li {
+        margin-left: 30px;
+        font-family: 'Happiness-Sans-Title';
+      }
+
+      a {
+        color: wheat;
+        text-decoration: 3px solid wheat;
+      }
+
+      ul li {
+        list-style-type: none;
+        display: inline;
+        outline: 1px;
+      }
+
+      h1 {
+        margin: 50px;
+        font-family: 'Happiness-Sans-Title';
+      }
+
+      p {
+        color: wheat;
+        font-family: 'Happiness-Sans-Title';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title1">
+      <h1 style="display: inline">
+        <a href="index.html">에너지 절약 프로젝트</a>
+      </h1>
+    </div>
+
+    <div class="select1">
+      <ul id="Font-face">
+        <li class="Login_pos">
+          <a href="status.html">총 사용량 확인하기</a>
+        </li>
+
+        <li><a href="start.html">전력 사용량 측정 시작</a></li>
+
+        <li><a href="promotion/how-to.html">사용 방법 확인하기</a></li>
+
+        <li><a href="promotion/index.html">홍보 페이지 바로가기</a></li>
+
+        <li class="Login_pos">
+          <a href="login.php"><strong>Login</strong></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="select2">
+      <ul>
+        <li>4페이지로 이동하기</li>
+
+        <li>5페이지로 이동하기</li>
+      </ul>
+    </div>
+
+    <p>
+      C언어를 배우면 쓰레기값이란 것에 대해 들어본 적이 있을 것입니다. 대부분
+      쓰레기값이 생기는 이유에 대해서는 듣지 못하고 'x = 0처럼 초기값을 넣어서
+      쓰레기값이 뜨지 않게 할 수 있다' 를 배우죠. 만약 자바만 배우셨거나 자바를
+      배우셨다면 쓰레기값이란 것은 듣지 못했을 수도 있습니다. 자바에서는
+      쓰레기값이란 것이 존재하지 않기 때문이죠. 언어마다 쓰레기값 발생에 차이가
+      있는데, 쓰레기값은 왜 뜨는걸까요?   모든 프로그램은 RAM이라 불리는
+      메모리에 올라가게 됩니다. 이때 램에 특정 값을 할당한다면 쓰레기값은 볼 수
+      없을 것입니다. 하지만 int x;처럼 변수 선언만 한다면 이는 언어에 따라 다른
+      결과가 나옵니다. 이런 결과가 나오는 이유는 각 언어가 결정하는 방법이
+      다르기 때문인데요. C의 경우 초기값이 없다면 해당 변수에 값을 대입하지
+      않음으로써 프로그램의 효율을 높일 수 있습니다.(실제 성능 상향에 있어서
+      유효한 수준은 아닙니다. '잠을 5분 더 잤을 때 회복하는 피로량' 와
+      비슷합니다) 반면에 자바에서는 모든 변수에 언어가 지정한 초기값을
+      넣어줍니다.(대부분 초기값은 0) 초기값을 넣어줌으로써 C처럼 쓰레기값이
+      뜨지는 않겠지만 초기값을 넣어준 만큼의 속도 지연은 발생할 것입니다.    
+      어떤 것이 더 좋다고 말하는 것은 애매합니다. C는 속도를 위해, 자바는 편의를
+      위해 초기값을 넣는가 넣지 않는가를 결정한 것이기 때문이죠. 하지만 C에서도
+      초기값을 넣는 경우가 하나 있습니다. 전역 변수나 static 변수를 선언했을
+      경우 초기값을 0으로 반드시 넣어주는데요. 이를 생각해보면 전역 변수나
+      static변수는 한번 값을 잘못 넣으면 프로그램이 무너지기 때문에 안전성을
+      속도보다 우선시해서 넣어준 것 같습니다.   참고로 편의를 위해 미리 특정
+      값으로 초기화 되는 경우가 있습니다. 디버깅 상태로 프로그램을 실행할 경우
+      컴파일러가 개발자가 실수했음을 눈치챌 수 있도록 하기 위해 스택 영역 전체를
+      임의의 값을 지정해놓는 경우가 있습니다. 개발자는 메모리 값이 0xCBCBCBCB가
+      출력될 경우 포인터 오류가 있음을 알 수 있 수 있게 됩니다.   일부 사례를
+      제외한다면, C에서의 쓰레기값은 언어에서 아무 것도 하지 않았으므로 메모리에
+      있는 임의의 값이라 할 수 있습니다. window.ReactionButtonType = 'reaction';
+      window.ReactionApiUrl = '//ammff.tistory.com/reaction';
+      window.ReactionReqBody = { entryId: 33 } 출처:
+      https://ammff.tistory.com/33 [아메리카노가 그렇게 맛있답니다
+      여러분:티스토리]
+    </p>
+  </body>
+</html>
