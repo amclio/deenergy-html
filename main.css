@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 400;
+  src: url('/assets/fonts/suit/SUIT-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 500;
+  src: url('/assets/fonts/suit/SUIT-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 600;
+  src: url('/assets/fonts/suit/SUIT-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 700;
+  src: url('/assets/fonts/suit/SUIT-Bold.woff2') format('woff2');
+}
+
+* {
+  font-family: SUIT, sans-serif;
+  color: #212529;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+header {
+  user-select: none;
+  padding: 0 1em;
+  margin: 1em 0;
+}
+
+section {
+  padding: 0 1em;
+  margin: 4em 0;
+}
+
+header .container {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+header .container .title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+header .container .sub {
+  font-size: 0.9rem;
+}
+
+section.reserved {
+  margin-top: 3em;
+}
+section.reserved .section {
+  margin-bottom: 8px;
+}
+section.reserved .section .current {
+  font-size: 0.9rem;
+  color: #868e96;
+  margin-bottom: 2px;
+}
+section.reserved .energy .number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+section.reserved .energy .wh {
+  margin-left: 2px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+section.reserved .check {
+  margin: 1.4em 0;
+}
+section.reserved .check .lable {
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline;
+  color: #3b5bdb;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #dbe4ff;
+}
+section.reserved .check .container {
+  margin: 0.6em 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+section.reserved .check .container .circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #5c7cfa;
+}
+section.reserved .check .container .circle svg {
+  width: 1em;
+  height: 1em;
+  margin-top: 2px;
+  margin-left: 2px;
+  display: inline-block;
+}
+
+section.graph {
+}
