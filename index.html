@@ -46,17 +46,17 @@
         <div class="sub">by CTQ from Seil</div>
       </div>
     </header>
-    <section class="reserved">
-      <div class="section">
-        <div class="current">지금까지</div>
-        <div class="current">절약한 에너지</div>
-      </div>
-      <div class="energy">
-        <span class="number">8,883</span><span class="wh">kWh</span>
-      </div>
-      <div class="check">
-        <div class="lable">에너지 절약 상태 — Good</div>
-        <!-- <div class="container">
+    <div class="content">
+      <section class="reserved">
+        <div class="section">
+          <div class="current">지금까지 절약한 에너지</div>
+        </div>
+        <div class="energy highlight">
+          <span class="number">8,883</span><span class="wh">kWh</span>
+        </div>
+        <div class="check">
+          <div class="lable">에너지 절약 상태 — Good</div>
+          <!-- <div class="container">
           <div class="circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,11 +72,32 @@
           </div>
           <div class="text">좋음</div>
         </div> -->
-      </div>
-    </section>
-    <section class="graph">
-      <canvas id="LineG" style="width: 1600px; height: 900px"></canvas>
-    </section>
+        </div>
+      </section>
+      <section class="graph">
+        <div class="header">에너지 절약량</div>
+        <canvas id="LineG" style="width: 1600px; height: 900px"></canvas>
+      </section>
+      <section class="compare">
+        <div class="container">
+          <div class="header">2021년 총 절약량</div>
+          <div class="value">
+            <span class="number">10,100</span>
+            <span class="wh">kWh</span>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header">2022년 총 절약량</div>
+          <div class="value highlight">
+            <span class="number">14,100</span>
+            <span class="wh">kWh</span>
+          </div>
+        </div>
+      </section>
+      <section class="devices">
+        <div class="header">기기</div>
+      </section>
+    </div>
     <script>
       //그래프 값(예시)
       // var L1x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
